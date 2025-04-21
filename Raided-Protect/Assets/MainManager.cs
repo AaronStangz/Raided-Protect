@@ -6,5 +6,8 @@ public class MainManager : MonoBehaviour
 {
     public int HubLevel;
     public int HubLevelNeeded;
+
+    public int Gold;
+
     public int BasePlate;
 }

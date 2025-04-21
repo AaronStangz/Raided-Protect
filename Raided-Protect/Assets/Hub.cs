@@ -9,11 +9,15 @@ public class Hub : MonoBehaviour
 
     public int openRange;
     public bool HubOpen;
+    public bool BuildModeOpen;
 
     public GameObject HubGUI;
-    public GameObject HubUpgradeingModeGUI;
+    public GameObject HubBuildModeGUI;
+    public GameObject HubBuildMode;
 
     public GameObject Player;
+    public GameObject PlayerCam;
+    public GameObject BuildModeCam;
 
     void Start()
     {
@@ -27,9 +31,20 @@ public class Hub : MonoBehaviour
         {
             HubOpen = false;
             HubGUI.SetActive(false);
-            HubUpgradeingModeGUI.SetActive(false);
+            HubBuildModeGUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Player.GetComponent<PlayerMovement>().enabled = true;
+            PlayerCam.GetComponent<PlayerCam>().enabled = true;
+        }
+
+        if (Input.GetKey(KeyCode.Escape) && BuildModeOpen)
+        {
+            BuildModeOpen = false;
+            HubGUI.SetActive(true);
+            PlayerCam.SetActive(true);
+            HubBuildModeGUI.SetActive(false);
+            BuildModeCam.SetActive(false);
+            HubBuildMode.SetActive(false);
         }
     }
 
@@ -39,6 +54,7 @@ public class Hub : MonoBehaviour
         HubGUI.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Player.GetComponent<PlayerMovement>().enabled = false;
+        PlayerCam.GetComponent<PlayerCam>().enabled = false;
     }
 
     public void UpgradeHub()
@@ -48,7 +64,23 @@ public class Hub : MonoBehaviour
 
     public void UpgradeingMode()
     {
+        BuildModeOpen = true;
         HubGUI.SetActive(false);
-        HubUpgradeingModeGUI.SetActive(true);
+        PlayerCam.SetActive(false);
+        HubBuildModeGUI.SetActive(true);
+        BuildModeCam.SetActive(true);
+        HubBuildMode.SetActive(true);
     }
+
+    public GameObject[] Pages;
+    public GameObject[] Backdrops;
+
+    public void TogglePages(int indexToEnable)
+    {
+        for (int i = 0; i < Pages.Length; i++)
+        {
+            Pages[i].SetActive(indexToEnable == i);
+        }
+    }
+
 }

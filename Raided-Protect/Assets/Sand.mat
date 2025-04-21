@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sand
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 82dc29ae0e4965748be92c470a567836,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -17,8 +18,7 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -49,8 +49,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Grass_Main_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grass_Second_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grass_Third_Texture:
+        m_Texture: {fileID: 2800000, guid: 47e78cb61aafd5d46b4fee14203c3bce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Main_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -65,8 +81,44 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Sand_Main_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Sand_Second_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Sand_Third_Texture:
+        m_Texture: {fileID: 2800000, guid: 47e78cb61aafd5d46b4fee14203c3bce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Second_Texture:
+        m_Texture: {fileID: 2800000, guid: 9be60290144d1034c9e4015186dbcdde, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Spread_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Spred_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stone_Main_Texture:
+        m_Texture: {fileID: 2800000, guid: 7d7e4b1e79bfacb4b95390e7c8f407b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stone_Second_Texture:
+        m_Texture: {fileID: 2800000, guid: 032fb3c7360ba1044a7986b4f760b25a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Stone_Third_Texture:
+        m_Texture: {fileID: 2800000, guid: 9be60290144d1034c9e4015186dbcdde, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -86,7 +138,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Blend: 0
+    - _Blend: 1
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -101,16 +153,27 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Grass_Height: 1.1
+    - _Grass_Smoothness: 1
+    - _Main_Tile: 0.25
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Sand_Height: 1.25
+    - _Sand_Smoothness: 1
+    - _Second_Tile: 0.5
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Spread_Tile: 0.01
+    - _Spred_tile: 0.01
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
+    - _Stone_Height: 1.1
+    - _Stone_Smoothness: 1
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -118,7 +181,18 @@ Material:
     - _BaseColor: {r: 1, g: 0.737265, b: 0.36320752, a: 1}
     - _Color: {r: 1, g: 0.737265, b: 0.3632075, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Grass_Main_Color: {r: 1, g: 0.78494495, b: 0.4198113, a: 0}
+    - _Grass_Second_Color: {r: 0.5660378, g: 0.3963672, b: 0.10946956, a: 0}
+    - _Grass_Third_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+    - _Main_Color: {r: 1, g: 0.7725491, b: 0.53333336, a: 1}
+    - _Sand_Main_Color: {r: 0.8301887, g: 0.6479397, b: 0.44250622, a: 0}
+    - _Sand_Second_Color: {r: 0.4339623, g: 0.32220483, b: 0.19855823, a: 0}
+    - _Sand_Third_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Second_Color: {r: 1, g: 0.47450984, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Stone_Main_Color: {r: 1, g: 0.9066086, b: 0.6933962, a: 0}
+    - _Stone_Second_Color: {r: 1, g: 0.9606363, b: 0.9103774, a: 0}
+    - _Stone_Third_Color: {r: 0.48235297, g: 0.454902, b: 0.41960788, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &731144221821195429
